@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+ /* Fullscreen video */
+ .bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Send the video to the back */
+  transform: translate(-50%, -50%);
+}
+
+/* Centered container */
+.container {
+  position: relative;
+  z-index: 1; /* Bring the form to the front */
+  color: white; /* Change text color for visibility */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block; /* Align form properly */
+}
