@@ -21,18 +21,25 @@ function ContactPage() {
           </p>
 
           {/* Contact Form */}
-          <form className="flex flex-col space-y-4 w-full max-w-md mx-auto border border-indigo-400">
+          <form
+            action="https://formsubmit.co/pierre.wy@outlook.fr?redirect=success.html"
+            method="POST"
+            className="flex flex-col space-y-4 w-full max-w-md mx-auto border border-indigo-400"
+          >
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
               className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
             />
             <textarea
+              name="message"
               placeholder="Your Message"
               rows="5"
               className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"

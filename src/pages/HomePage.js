@@ -13,26 +13,20 @@ function HomePage() {
 
           {/* Typewriter effect */}
           <p className=" sm:text-lg text-gray-400 mb-4 typing-animation text-sm">
-            I create dynamic and responsive web applications.
+            I create dynamic web and desktop applications.
           </p>
 
           {/* Navigation Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
               to="/about"
-              className="w-full sm:w-1/3 btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
+              className="w-full sm:w-1/2 btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
             >
               About
             </Link>
             <Link
-              to="/projects"
-              className="w-full sm:w-1/3 btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Projects
-            </Link>
-            <Link
               to="/contact"
-              className="w-full sm:w-1/3 btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
+              className="w-full sm:w-1/2 btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
             >
               Contact
             </Link>
