@@ -26,6 +26,13 @@ function ContactPage() {
             {/* Disable reCAPTCHA */}
             <input type="hidden" name="_captcha" value="false" />
 
+            {/* Redirect to custom Thank You page */}
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.pierrenh.com/thank-you"
+            />
+
             <input
               type="text"
               name="name"
