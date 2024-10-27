@@ -57,6 +57,9 @@ function ContactPage() {
             >
               Send Message
             </button>
+            <p className="text-xs  sm:text-lg text-gray-400 mb-6">
+              After submitting, please allow a few seconds for processing.
+            </p>
           </form>
 
           {/* Back to Homepage Button */}
