@@ -126,6 +126,8 @@ function AboutPage() {
         loop
         muted
         playsInline
+        disablePictureInPicture="true"
+        preload="true"
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       >
         <source src={require("../media/starrynight.mp4")} type="video/mp4" />
