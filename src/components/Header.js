@@ -1,14 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="flex justify-end  p-2 opacity-75 shadow-md z-20 mr-10">
+    <header className="flex justify-center sm:justify-center p-2 opacity-75 shadow-md z-20 m-7">
       {/* Navigation Links */}
-      <nav className="flex space-x-5">
-        <Link to="/" className="text-white hover:underline">Home</Link>
-        <Link to="/about" className="text-white hover:underline">About Me</Link>
-        <Link to="/projects" className="text-white hover:underline">Projects</Link>
-        <Link to="/contact" className="text-white hover:underline">Contact</Link>
+      <nav className="flex space-x-5 justify-center w-full sm:justify-end">
+        <Link to="/" className="text-white hover:underline">
+          Home
+        </Link>
+        <Link to="/about" className="text-white hover:underline">
+          About Me
+        </Link>
+        <Link to="/projects" className="text-white hover:underline">
+          Projects
+        </Link>
+        <Link to="/contact" className="text-white hover:underline">
+          Contact
+        </Link>
       </nav>
     </header>
   );

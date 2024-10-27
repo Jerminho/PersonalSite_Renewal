@@ -21,8 +21,15 @@ code {
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
-  animation: typing 4.5s steps(50, end), blink-caret 0.5s step-end infinite;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
   padding-right: 5px;
+}
+
+/* Media query to disable typing animation on screens smaller than 412px */
+@media (max-width: 411px) {
+  .typing-animation {
+    font-size: 0.78rem;
+  }
 }
 
 @keyframes typing {

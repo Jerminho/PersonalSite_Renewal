@@ -6,9 +6,9 @@ import EmailIcon from "../media/email-svg.svg";
 
 const Media = () => {
   return (
-    <div className="flex justify-center space-x-4 p-4 z-20">
+    <div className="flex justify-center space-x-4 p-4 z-20 mt-6">
       <a
-        href="www.linkedin.com/in/pierre-jérémie-ryan-njiné-happy-552a26206"
+        href="https://www.linkedin.com/in/pierre-jérémie-ryan-njiné-happy-552a26206"
         target="_blank"
         rel="noopener noreferrer"
       >
