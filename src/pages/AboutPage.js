@@ -92,6 +92,30 @@ function AboutPage() {
             </ul>
           </section>
 
+
+          {/* Short Divider */}
+          <div className="mx-auto w-1/4 h-1 bg-gradient-to-r from-purple-600 to-indigo-800 mb-8"></div>
+
+        {/* Experience & Education Section */}
+        <section className="mb-12">
+            <h2 className="text-2xl sm:text-3xl font-semibold mt-12 mb-4">
+              Languages
+            </h2>
+            <ul className="list-none  text-gray-300 space-y-6 text-center mt-8">
+              <li>
+                <strong>English:</strong> Fluently
+              </li>
+              <li>
+                <strong>French:</strong> Fluently
+              </li>
+              <li>
+                <strong>Dutch:</strong> Fluently
+              </li>
+            </ul>
+          </section>
+
+
+
           {/* Short Divider */}
           <div className="mx-auto w-1/4 h-1 bg-gradient-to-r from-purple-600 to-indigo-800 mb-8"></div>
 
