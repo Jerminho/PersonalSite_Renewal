@@ -17,7 +17,6 @@ function ThankYouPage() {
             Your message has been sent successfully. I'll get back to you soon!
           </p>
 
-          {/* Back to Homepage Button */}
           <Link
             to="/"
             className="btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
@@ -29,7 +28,6 @@ function ThankYouPage() {
 
       <Media />
 
-      {/* Footer */}
       <Footer />
 
       {/* Background Video */}

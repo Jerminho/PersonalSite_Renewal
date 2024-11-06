@@ -33,7 +33,6 @@ function AboutPage() {
               Skills & Expertise
             </h2>
             <div className="flex flex-wrap justify-center gap-8">
-              {/* Skill with SVG and Label */}
               <div className="flex flex-col items-center">
                 <img src={NetIcon} alt=".NET" className="w-12 h-12" />
                 <span className="mt-2 text-white">.NET</span>
@@ -119,7 +118,6 @@ function AboutPage() {
           {/* Short Divider */}
           <div className="mx-auto w-1/4 h-1 bg-gradient-to-r from-purple-600 to-indigo-800 mb-8"></div>
 
-          {/* Personal Interests Section */}
           <section className="mb-8 ">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
               Beyond Coding
@@ -130,7 +128,6 @@ function AboutPage() {
             </p>
           </section>
 
-          {/* Call to Action Button */}
           <section className="text-center mt-8">
             <a
               href="/contact"

@@ -71,10 +71,8 @@ function ContactPage() {
         </div>
       </main>
 
-      {/* Social Media Links */}
       <Media />
 
-      {/* Footer */}
       <Footer />
 
       {/* Background Video */}
