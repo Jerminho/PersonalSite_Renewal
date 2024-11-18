@@ -20,7 +20,7 @@ const Media = () => {
       </a>
 
       <a
-        href="https://www.instagram.com/still.nh/"
+        href="https://www.instagram.com/built.by.nh/"
         target="_blank"
         rel="noopener noreferrer"
       >
