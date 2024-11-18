@@ -1,10 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Media from "../components/Media";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 function ContactPage() {
+  const [result, setResult] = useState("");
+  const navigate = useNavigate(); // Hook for navigation
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "8661fa52-27ac-4ad7-9c82-459d860bdf53");
+    formData.append("recipient", "pierre.wy@outlook.fr");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("");
+        event.target.reset();
+        navigate("/thank-you");
+      } else {
+        setResult("An error occurred. Please try again later.");
+        console.error("Submission error:", data);
+      }
+    } catch (error) {
+      setResult("An error occurred. Please try again later.");
+      console.error("Submission error:", error);
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen justify-between relative overflow-hidden">
       <Header />
@@ -19,37 +52,29 @@ function ContactPage() {
           </p>
 
           <form
-            action="https://formsubmit.co/pierre.wy@outlook.fr?redirect=success.html"
-            method="POST"
+            onSubmit={onSubmit}
             className="flex flex-col space-y-4 w-full max-w-md mx-auto border border-indigo-400"
           >
-            {/* Disable reCAPTCHA */}
-            <input type="hidden" name="_captcha" value="false" />
-
-            {/* Redirect to custom Thank You page */}
-            <input
-              type="hidden"
-              name="_next"
-              value="https://www.pierrenh.com/thank-you"
-            />
-
             <input
               type="text"
               name="name"
               placeholder="Your Name"
               className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
+              required
             />
             <input
               type="email"
               name="email"
               placeholder="Your Email"
               className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
+              required
             />
             <textarea
               name="message"
               placeholder="Your Message"
               rows="5"
               className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
+              required
             ></textarea>
             <button
               type="submit"
@@ -57,12 +82,11 @@ function ContactPage() {
             >
               Send Message
             </button>
-            <p className="text-xs  sm:text-lg text-gray-400 mb-6">
-              After submitting, please allow a few seconds for processing.
-            </p>
+            {result && (
+              <p className="text-center text-sm text-gray-400 mt-4">{result}</p>
+            )}
           </form>
 
-          {/* Back to Homepage Button */}
           <div className="mt-6">
             <Link to="/" className="text-indigo-400 hover:text-indigo-300">
               ← Back to Homepage
@@ -75,7 +99,6 @@ function ContactPage() {
 
       <Footer />
 
-      {/* Background Video */}
       <video
         autoPlay
         loop
