@@ -8,7 +8,7 @@ function Header() {
           Home
         </Link>
         <Link to="/about" className="text-white hover:underline">
-          About Me
+          Projects
         </Link>
 
         <Link to="/contact" className="text-white hover:underline">

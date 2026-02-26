@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 function ContactPage() {
   const [result, setResult] = useState("");
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -30,66 +30,69 @@ function ContactPage() {
         navigate("/thank-you");
       } else {
         setResult("An error occurred. Please try again later.");
-        console.error("Submission error:", data);
       }
     } catch (error) {
       setResult("An error occurred. Please try again later.");
-      console.error("Submission error:", error);
     }
   };
 
   return (
-    <div className="flex flex-col min-h-screen justify-between relative overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-[#111] text-gray-200 relative overflow-hidden">
       <Header />
 
-      <main className="flex flex-col items-center justify-center flex-grow text-center relative z-20 p-6">
-        <div className="relative z-20 p-5 text-white bg-black bg-opacity-50 rounded-xl mx-2 sm:mx-4">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h1>
+      <main className="flex flex-col items-center justify-center flex-grow px-6 z-20">
+        <div className="w-full max-w-md bg-white/10 border border-gray-700 rounded-xl px-5 py-6 sm:px-8 sm:py-8">
+          <h1 className="text-3xl sm:text-4xl boldfont-light tracking-wide mb-4 text-center">
+            Contact
+          </h1>
 
-          <p className="text-base sm:text-lg text-gray-400 mb-6">
-            I’m excited to connect! Feel free to reach out if you’d like to
-            collaborate or have any questions.
+          <p className="text-sm sm:text-base text-gray-400 mb-6 text-center">
+            Have a project in mind? Let’s talk.
           </p>
 
           <form
             onSubmit={onSubmit}
-            className="flex flex-col space-y-4 w-full max-w-md mx-auto border border-indigo-400"
+            className="flex flex-col space-y-4"
           >
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
-              className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
+              placeholder="Your name"
+              className="px-3 py-2 bg-white/5 border border-gray-700 rounded text-gray-200 placeholder-gray-500 outline-none focus:border-gray-500 transition"
               required
             />
+
             <input
               type="email"
               name="email"
-              placeholder="Your Email"
-              className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
+              placeholder="Your email"
+              className="px-3 py-2 bg-white/5 border border-gray-700 rounded text-gray-200 placeholder-gray-500 outline-none focus:border-gray-500 transition"
               required
             />
+
             <textarea
               name="message"
-              placeholder="Your Message"
-              rows="5"
-              className="p-3 bg-black bg-opacity-60 text-white placeholder-gray-400 rounded outline-none"
+              placeholder="Your message"
+              rows="4"
+              className="px-3 py-2 bg-white/5 border border-gray-700 rounded text-gray-200 placeholder-gray-500 outline-none focus:border-gray-500 transition"
               required
-            ></textarea>
+            />
+
             <button
               type="submit"
-              className="btn bg-gradient-to-r from-purple-600 to-indigo-800 hover:from-purple-500 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded"
+              className="mt-2 py-2 bg-white/10 hover:bg-white/20 border border-gray-700 rounded text-sm tracking-wide transition"
             >
-              Send Message
+              Send message
             </button>
+
             {result && (
-              <p className="text-center text-sm text-gray-400 mt-4">{result}</p>
+              <p className="text-center text-xs text-gray-500 mt-2">{result}</p>
             )}
           </form>
 
-          <div className="mt-6">
-            <Link to="/" className="text-indigo-400 hover:text-indigo-300">
-              ← Back to Homepage
+          <div className="mt-6 text-center">
+            <Link to="/" className="text-gray-500 hover:text-gray-300 transition">
+              ← Back home
             </Link>
           </div>
         </div>
@@ -108,7 +111,7 @@ function ContactPage() {
         preload="true"
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       >
-        <source src={require("../media/starrynight.mp4")} type="video/mp4" />
+        <source src={require("../media/dusty.mp4")} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
